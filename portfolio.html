@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Razaq's Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"> <!-- Link to your CSS file -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Updated Google Font -->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1> ABDUL RAZAQ</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to My Portfolio</h1>
+      <p>Engineer | Developer | Problem Solver</p>
+      <button onclick="window.location.href='#portfolio';">View My Work</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          Hi, I'm Razaq, a passionate software engineer specializing in web development and data structures.
+          With a background in Information Science, I have a keen interest in building efficient and scalable applications.
+          When I'm not coding, I love learning new languages and exploring the latest in tech.
+        </p>
+      </div>
+      <div class="about-pic">
+        <img src="IMG-20221212-WA0015.jpg" alt="Razaq's Picture"> <!-- Replace with your actual image path -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>A web-based application built using React and Node.js.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>An e-commerce platform developed with Django and PostgreSQL.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="project3.jpg" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>A mobile app created with Flutter and Firebase for real-time messaging.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="project4.jpg" alt="Project 4">
+        <h3>Project 4</h3>
+        <p>A machine learning project for predicting stock prices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Abdul Razaq | All Rights Reserved</p>
+  </footer>
+  
+  <script src="portfolio.js"></script> <!-- Link to your JS file -->
+
+</body>
+</html>

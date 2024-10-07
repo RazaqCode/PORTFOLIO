@@ -1,0 +1,330 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif; /* Updated to Poppins */
+    background-color: #f1f5f8;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar */
+  header {
+    background: linear-gradient(90deg, #0077b6, #023e8a);
+    color: #fff;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  header.scrolled {
+    background-color: rgba(0, 119, 182, 0.9);
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffdd57;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background-image: url('path/to/your-image.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 119, 182, 0.7);
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .hero button {
+    background-color: #ffffff;
+    color: #023e8a;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .hero button.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hero h1.fade-in,
+  .hero p.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* About Section */
+  .about {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #0077b6;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .about-pic {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .about-pic.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .about-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Portfolio Section */
+  .portfolio {
+    padding: 100px 20px;
+    background-color: #f1f5f8;
+  }
+  
+  .portfolio h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #0077b6;
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .portfolio-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .portfolio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-item h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #023e8a;
+  }
+  
+  .portfolio-item p {
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-color: #023e8a;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact textarea {
+    width: 100%;
+    background-color: #f1f5f8;
+    color: #333;
+  }
+  
+  .contact input[type="submit"] {
+    background-color: #51baf3;
+    color: #023e8a;
+    cursor: pointer;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact input[type="submit"]:hover {
+    background-color: #fff;
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      padding: 20px;
+    }
+  
+    nav ul li {
+      margin: 0 10px;
+    }
+  
+    .hero h1 {
+      font-size: 3rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .about-content {
+      flex-direction: column;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .about-pic {
+      margin-top: 20px;
+    }
+  }
+  
